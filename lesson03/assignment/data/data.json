@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "name": "Paolo Maldini",
     "jobTitle": "Front End Developer",

@@ -4,6 +4,8 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+// Set up the gride template
 body {
     align-items: start;
     color: $white;
@@ -14,6 +16,7 @@ body {
     min-height: 100vh;
 }
 
+// Header
 header {
     align-items: center;
     background: $red;
@@ -22,34 +25,38 @@ header {
     justify-content: center;
 }
 
+// Nav Bar
 nav {
     background-color: $green;
     
+    // Distibute the list evenly
     ul{
         display: flex;
         justify-items: center;
         justify-content: space-around;
-        list-style: none;
         text-align: center;
     }
 
+    // RM the nave dot and add some padding to center
     li {
         display: inline-block;
         margin-right: 1rem;
-        position: relative;
     }
 
+    // RM the underline
     a {
-        text-decoration: none;
         color: $white;
+        text-decoration: none;
     }
 }
 
+// Main will display the content side by side
 main {
     display: grid;
     grid-template-columns: repeat(3, minmax(2rem, 1fr));
     height: 100%;
 
+    // Side bar takes up the first grid column
     .main_sidebar {
         align-items: center;
         background-color: $blue;
@@ -58,6 +65,7 @@ main {
         justify-content: center;
     }
 
+    // Main content take up the other 3
     .main_content {
         align-items: center;
         background-color: $orange;
@@ -78,7 +86,7 @@ main {
     }
 }
 
-.footer {
+footer {
     align-items: center;
     background-color: $purple;
     display: flex;

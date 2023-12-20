@@ -4,3 +4,92 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+
+// Set up the gride template
+body {
+    align-items: start;
+    color: $white;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+// Header
+header {
+    align-items: center;
+    background: $red;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+}
+
+// Nav Bar
+nav {
+    background-color: $green;
+    
+    // Distibute the list evenly
+    ul{
+        display: flex;
+        justify-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    // RM the nave dot and add some padding to center
+    li {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    // RM the underline
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+// Main will display the content side by side
+main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(2rem, 1fr));
+    height: 100%;
+
+    // Side bar takes up the first grid column
+    .main_sidebar {
+        align-items: center;
+        background-color: $blue;
+        display: flex;
+        grid-column: 1 / span 1;
+        justify-content: center;
+    }
+
+    // Main content take up the other 3
+    .main_content {
+        align-items: center;
+        background-color: $orange;
+        display: flex;
+        grid-column: 2 / span 2;
+        justify-content: center;
+    }
+
+    @include media-query(mobile) {
+        .main_sidebar {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .main_content {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    }
+}
+
+footer {
+    align-items: center;
+    background-color: $purple;
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+}

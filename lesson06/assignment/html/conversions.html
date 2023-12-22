@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Assignment 06 - Bootstrap 4</title>
+</head>
+
+<body class="pl-5 pr-5">
+    <main class="main">
+        <!-- Nav Bar -->
+        <nav class="navbar navbar-expand-sm bg-white navbar-light">
+            <ul class="navbar-nav ml-5">
+                <li class="pl-4 nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="pl-4 nav-item">
+                    <a class="nav-link" href="../html/about_me.html">About</a>
+                </li>
+                <li class="pl-4 nav-item">
+                    <a class="nav-link" href="../html/recipes.html">Recipes</a>
+                </li>
+                <li class="pl-4 nav-item">
+                    <a class="nav-link" href="../html/conversions.html">Conversions</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="mt-5">
+            <h1 class="text-center">Common Conversions</h1>
+        </section>
+        <section class="mt-5">
+
+            <!-- pop up tooltip for user to know to click -->
+            <div class="container" data-toggle="tooltip" title="Click to expand" data-animation="true">
+                <div class="panel-group" id="accordion">
+                    <!-- Common conversions for imperial -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title bg-info p-3">
+                                <a data-toggle="collapse" data-parent="#accordion" data-target="#q1" aria-expanded="false"
+                                aria-controls="q1"
+                                    class="text-decoration-none text-white">Imperial Conversions</a>
+                            </h3>
+                        </div>
+                        <div id="q1" class="panel-collapse collapse">
+                            <div class="panel-body bg-light p-3"> 
+                                <p>
+                                    1 tablespoons = 3 teaspoons <br>
+                                    1 ounce = 2 tablespoons <br>
+                                    1/4 cup = 4 tablespoons <br>
+                                    1 cup = 8 ounces <br>
+                                    1 gallon = 16 cups <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Common conversions for metric -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title bg-info p-3">
+                                <a data-toggle="collapse" data-parent="#accordion" data-target="#q2"
+                                aria-expanded="false"
+                                aria-controls="q2"
+                                    class="text-decoration-none text-white">Metric Conversions</a>
+                            </h3>
+                        </div>
+                        <div id="q2" class="panel-collapse collapse">
+                            <div class="panel-body bg-light p-3"> 
+                                <p>
+                                    1 ml  =  1g <br>
+                                    kilo = 1,000 <br>
+                                    hecto = 100 <br>
+                                    deka = 10 <br>
+                                    deci = .1 <br>
+                                    centi = .01 <br>
+                                    mili = .001 <br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Common conversions for imperial to metric -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title bg-info p-3">
+                                <a data-toggle="collapse" data-parent="#accordion" data-target="#q3"
+                                aria-expanded="false"
+                                aria-controls="q3"
+                                    class="text-decoration-none text-white">Imperial to Metric Conversions</a>
+                            </h3>
+                        </div>
+                        <div id="q3" class="panel-collapse collapse">
+                            <div class="panel-body bg-light p-3"> 
+                               <p>
+                                1 cup = 240 ml <br>
+                                1 Tbsp = 15 ml <br>
+                                1 tsp = 5 ml <br>
+                                1 fluid ounce = 30 m <br>
+                                1 oz = 28 g <br>
+                                1 lb (pound) = 454 g <br>
+                               </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="m-5 p-5 d-flex flex-column justify-content-center align-items-center">
+        <p class="text-center">copyright 2023</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- Tooltip Value Seclector and Timeout  -->
+        <script>$(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            function removeToolTip() {
+                    $('[data-toggle="tooltip"]').tooltip('hide');
+                }
+                setTimeout(removeToolTip, 1500);
+        });</script>
+    </body>
+
+</html>
